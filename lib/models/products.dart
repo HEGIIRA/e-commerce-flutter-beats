@@ -42,7 +42,7 @@ class Product {
       size: 8,
       description: dummyText,
       image: "assets/images/product_img/p_2.png",
-      color: const Color.fromARGB(194, 242, 231, 238)),
+      color: Color.fromARGB(194, 209, 180, 198)),
   Product(
       id: 3,
       title: "Beats Studio Buds +",
