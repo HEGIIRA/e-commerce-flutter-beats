@@ -47,7 +47,7 @@ class _BodyState extends State<Body> {
             Expanded //buat mengisi kekosongan yg ada, biar isinya proposinal
             (
               flex: 3, //untuk ngasih jarak 3 column dan 3 row utk itu berada
-              child: SizedBox(// in tuh buat dia buat space gitu lh(jarak antara widget2), kalo tanpa ini ga bisa pake widht apa height, dan jg gabisa pake double.infinity
+              child: SizedBox(// in tuh buat dia buat space gitu lh(jarak antara widget2), kalo tanpa ini ga bisa pake width apa height, dan jg gabisa pake double.infinity
                 width: double.infinity,//ini tuh buat bikin ke tengah, jadi dia akan memenuhi layar yg ada, bisa dibilang dia akan ngestract jadi dia bakal ke tengah
                 child: PageView.builder( //pageview meng handle swipe swipe activity, builder ngatur/ngambil/membangun data
                   controller: _pageController, //intinya buat nge kontrol ganti page

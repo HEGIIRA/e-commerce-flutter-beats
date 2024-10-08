@@ -38,7 +38,7 @@ class _CategoriesState extends State<Categories> {
             //builder utk menampung data, untuk nge build ui nya
             itemCount: categories.length, //dari ney
             itemBuilder: (context, index) =>
-                _buildCategory(index) //ini buat nampung/membangun data yg bakal
+                _buildCategory(index) //ini buat nampung/membangun data yg bakal ditampilin yagasi? ga kedengeran
             ),
       ),
     );
