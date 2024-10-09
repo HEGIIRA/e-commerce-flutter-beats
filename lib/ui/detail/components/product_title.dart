@@ -36,7 +36,7 @@ class ProductTitle extends StatelessWidget {
           const SizedBox(height: defaultPadding), //buat ngasih jarak
           Row(
             children: [
-              Expanded(
+              Expanded( //buat ngisi ruang yg ada
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -58,7 +58,7 @@ class ProductTitle extends StatelessWidget {
                   ],
                 ),
               ),
-              Hero(
+              Hero( //biar transisi nya asoy
                 tag: "${product.id}", //tag tuh buatmanggil id gabar nya misal
                 child: Image.asset(  //child tuh buat widget nya/gambar nyaa
                   product.image,

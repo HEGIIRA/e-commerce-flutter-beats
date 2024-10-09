@@ -17,7 +17,7 @@ class _CartCounterState extends State<CartCounter> {
       children: <Widget>[   //ini best prektis ygy. <widget> ini buat memastikan/mendefinisikan/ngasih tau ini tuh isinya widget2
         OutlinedButton(
           style: OutlinedButton.styleFrom(
-            minimumSize: Size(45, 45),
+            minimumSize: const Size(45, 45),
             padding: EdgeInsets.zero,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10)

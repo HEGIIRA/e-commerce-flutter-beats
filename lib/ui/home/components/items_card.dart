@@ -12,7 +12,7 @@ class ItemsCard extends StatelessWidget {
   final VoidCallback press; //mengasih sebuah feed back ke user
 
 
-  //mvvm adalah model view-view model
+  //mvvm adalah model view - viewModel
   //model itu detail data
   //item itu untuk mendefinidiksn bagaiman sebuah objek akan terjadi
   //menjadikan semua object reusable
