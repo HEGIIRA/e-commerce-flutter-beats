@@ -16,6 +16,7 @@ class _CategoriesState extends State<Categories> {
   //list itu kurung kotak []
   //kalo map itu kurung kurawal{}
   //kalo ini list, pengembailan nya juga harus list, gabisa langsung dipanggil
+  //ini untuk inisialisasi viewpager
   List<String> categories = [
     "All", 
     "Earbuds", 

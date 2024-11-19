@@ -37,7 +37,11 @@ dependencies:
   cupertino_icons: ^1.0.8
   flutter_svg: ^2.0.10 #flutter svg library
   # ^ ini itu artinya compatible di fersi atas atas terbarunya
-  provider: ^6.1.2 #library for manegement
+  provider: ^6.1.2 #library for state manegement (provider, bloc, getX,) state management tuh ngatur semua perubaham state di apk kita,
+                                                                        #
+  fluttertoast: ^8.2.8 #ini buat si library toast
+  shared_preferences: ^2.3.2
+  
 
 dev_dependencies:
   flutter_test:
@@ -49,7 +53,7 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^3.0.0
-  #ngasih peraturan
+  #ngasih peraturan / batasan untuk aplikasinya
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

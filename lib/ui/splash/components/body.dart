@@ -1,5 +1,6 @@
 import 'package:e_commerce/consts.dart';
-import 'package:e_commerce/ui/home/catalogue_screen.dart';
+// import 'package:e_commerce/ui/auth/login_screen.dart';
+// import 'package:e_commerce/ui/home/catalogue_screen.dart';
 import 'package:e_commerce/ui/splash/components/splash_content.dart';
 import 'package:flutter/material.dart';
 
@@ -95,11 +96,16 @@ class _BodyState extends State<Body> {
                       // kode yg dipake buat berpindah antar halaman
                       // Aksi untuk halaman terakhir, pindah ke halaman utama
                       //what is length? panjangnya data/banyanknya data
-                      Navigator.push(
-                        context, //context itu represantisikan currrent page kita
-                        MaterialPageRoute(
-                          builder: (context) => const CatalogueScreen())
-                      );
+
+                      // INI PAKE NAMED ROUTE
+                      Navigator.pushNamed(context, '/login');
+
+                      // INI GA PAKE NAMED ROUTE
+                      // Navigator.push( //kalo push tuh dia buat numpukin, klo pop buat ngebuang si yg ditumpuk dan balik ke yg terakhir kali di tumpuk (screen nya, ini stack ceritanya)
+                      //   context, //context itu represantisikan currrent page kita
+                      //   MaterialPageRoute(
+                      //     builder: (context) => LoginScreen())
+                      // );
                       
                     } else {
                         // Berpindah ke halaman splash berikutnya

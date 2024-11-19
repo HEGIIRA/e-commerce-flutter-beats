@@ -38,21 +38,7 @@ class ItemsCard extends StatelessWidget {
                   child: Image.asset(product.image),
                   ),
                 ),
-                Positioned(
-                  top: 8, 
-                  right: 8, 
-                  child: Container(
-                    padding: const EdgeInsets.all(2), // Padding di dalem ikon love
-                    decoration: const BoxDecoration(
-                      color: Colors.white, //ini warna si yg bulet
-                      shape: BoxShape.circle, //bentuk yg bg nya tuh kan bulet ya
-                    ),
-                    child: IconButton(
-                      onPressed: () {},
-                      icon: const Icon(Icons.favorite_border, size: 20),
-                    )
-                  ),
-                ),
+                
               ],    
             ),
           ),
