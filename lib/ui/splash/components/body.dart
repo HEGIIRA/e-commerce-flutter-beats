@@ -60,8 +60,8 @@ class _BodyState extends State<Body> {
                         currentPage = value;// manggil integer representatif yg udh kita panggil di awal, dia mengambil data dari page pertama
                       });
                     },
-                  itemCount: splashData.length, //utk mengasih
-                  itemBuilder: (context, index) => SplashContent( //jembatan antara data ke data
+                  itemCount: splashData.length, //utk menghitung size nya data nya ada berapa
+                  itemBuilder: (context, index) => SplashContent( //jembatan antara data ke data ke UI
                     text: splashData[index]["text"]! , //ada tanda seru karna important, bang operator
                     image:  splashData[index]["image"]!
                     )

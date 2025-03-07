@@ -4,12 +4,18 @@ import 'package:flutter/material.dart';
 class BottomNavbar extends StatelessWidget {
   final int selectedIndex;
   final ValueChanged<int> onItemTapped;
-  const BottomNavbar({super.key, required this.selectedIndex, required this.onItemTapped});
+
+  const BottomNavbar({
+    super.key, 
+    required this.selectedIndex, 
+    required this.onItemTapped
+  });
   
 
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
+      backgroundColor: primaryColor,
       items: const <BottomNavigationBarItem>[
         BottomNavigationBarItem(
           icon: Icon(Icons.home),

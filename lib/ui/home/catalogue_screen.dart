@@ -1,8 +1,9 @@
 import 'package:e_commerce/consts.dart';
 import 'package:e_commerce/models/products.dart';
 import 'package:e_commerce/settings/settings_screen.dart';
+import 'package:e_commerce/ui/cart/cart_screen.dart';
 import 'package:e_commerce/ui/detail/detail_screen.dart';
-import 'package:e_commerce/ui/favorite/favorite_screen.dart';
+import 'package:e_commerce/ui/favorite/wishlist_screen.dart';
 import 'package:e_commerce/ui/home/components/bottom_navbar.dart';
 import 'package:e_commerce/ui/home/components/categories.dart';
 import 'package:e_commerce/ui/home/components/items_card.dart';
@@ -22,7 +23,7 @@ class _CatalogueScreenState extends State<CatalogueScreen> {
   // Daftar tampilan untuk setiap tab
   final List<Widget> _widgetOptions = [
     const CatalogueScreen(), // Home
-    const FavoriteScreen(),   // Wishlist
+    const WishlistScreen(),   // Wishlist
     const SettingsScreen(), // Settings 
     const ProfileScreen(),   // Profile
   ];
@@ -31,11 +32,15 @@ class _CatalogueScreenState extends State<CatalogueScreen> {
 
   //kangkah implementasi state management. 
   //step 1 : import library buat state management di pubspec.yaml
-  //step 2 : tambahkan ChangeNotifier di file terkait
-  //step 3 : adjusting main.dart
+  //step 2 : tambahkan ChangeNotifier di file terkait (bikin folder baru lib -> state management -> (file) anu_provider.dart)
+  // kalo pke api tambahin 'API' dan ttp pke changenotifier
+            //changeNotifier tuh class wajib hrus extend dgn class terkait
+  //step 3 : adjusting main.dart, dri main dart di implementasikan ke file provider
 
+  //function untuk aksi tap pada bottom navbar
   void _onItemTapped(int index) {
     setState(() {
+      //nyatain initial action bakal nampilin objek yg berada  di index ke-0
       _selectedIndex = index;
     });
   }
@@ -58,7 +63,14 @@ class _CatalogueScreenState extends State<CatalogueScreen> {
                               //tpi blom jelas klo di klik bakal melakukan function apa.
           icon: const Icon(Icons.search)),
           IconButton(
-              onPressed: () {}, icon: const Icon(Icons.shopping_cart_outlined))
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const CartScreen())
+                );
+              }, 
+              icon: const Icon(Icons.shopping_cart_outlined)
+          )
         ],
       ),
 
@@ -86,7 +98,7 @@ class _CatalogueScreenState extends State<CatalogueScreen> {
                         crossAxisCount: 2,  //jarak horizontal
                         mainAxisSpacing: defaultPadding,
                         crossAxisSpacing: defaultPadding,
-                        childAspectRatio: 0.75,  //buat perbandingan tinggi 
+                        childAspectRatio: 1.20,  //buat perbandingan tinggi 
                       ),
                       itemCount: product.length, //buat ambil data dri data product
                       itemBuilder: (context, index) => ItemsCard( //buat pindah page

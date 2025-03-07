@@ -48,7 +48,6 @@ class _CategoriesState extends State<Categories> {
   GestureDetector _buildCategory(int index) { //buat nyesuaiin dengan device nya
     return GestureDetector(
       //gesture detector itu kayak buat deteksi pergerakan menggunakan pen, tapi bisa juga tidak menggunakan pen
-      //Boiler Plate Code itu kalo itu udh di defind, trus kita defind ulang, jadi numpuk2
       // index itu buat data array
       onTap: () {
         setState(() { //buat nampilin perubahan

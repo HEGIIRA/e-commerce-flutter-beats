@@ -1,3 +1,5 @@
+# PUBSPEC YAML TUH FILE YG NYIMPEN SEMUA KONFIGURASI APLIKASI DAN LIBRARY PIHAK KETIGA YG DIGUNAKAN OLEH APLIKASI
+
 name: e_commerce
 description: "A new Flutter project."
 # The following line prevents the package from being accidentally published to
@@ -34,13 +36,18 @@ dependencies:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
+
+  # INI TUH DEPEDENCIES
+  # PUBSPEC YAML TUH FILE YG NYIMPEN SEMUA KONFIGURASI APLIKASI DAN LIBRARY PIHAK KETIGA YG DIGUNAKAN OLEH APLIKASI
   cupertino_icons: ^1.0.8
-  flutter_svg: ^2.0.10 #flutter svg library
+  flutter_svg: ^2.0.10 #flutter svg library, karna biasanya kan png, jp gituu nah in khusus
+  font_awesome_flutter: ^10.5.0
   # ^ ini itu artinya compatible di fersi atas atas terbarunya
   provider: ^6.1.2 #library for state manegement (provider, bloc, getX,) state management tuh ngatur semua perubaham state di apk kita,
-                                                                        #
+  
+                                                                      #
   fluttertoast: ^8.2.8 #ini buat si library toast
-  shared_preferences: ^2.3.2
+  shared_preferences: ^2.3.2 #ini buat nyimpen data secara lokal.
   
 
 dev_dependencies:

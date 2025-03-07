@@ -22,21 +22,21 @@ class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-          onPressed: () {}, 
-          icon: const Icon(Icons.arrow_back_ios_new)
-        ),
-        title: const Text('Profile'),
-        actions: [
-          IconButton(
-            onPressed: () {
-              Navigator.pop(context);
-            }, 
-            icon: const Icon(Icons.edit)
-          )
-        ],
-      ),
+      // appBar: AppBar(
+      //   leading: IconButton(
+      //     onPressed: () {}, 
+      //     icon: const Icon(Icons.arrow_back_ios_new)
+      //   ),
+      //   title: const Text('Profile'),
+      //   actions: [
+      //     IconButton(
+      //       onPressed: () {
+      //         Navigator.pop(context);
+      //       }, 
+      //       icon: const Icon(Icons.edit)
+      //     )
+      //   ],
+      // ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start, //biar di atas
@@ -50,7 +50,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   //INI BUAT SI FOTO NYA
                   CircleAvatar( //ini pake ini yg bikin gambar jdi bulet
                     radius: 70, //ini radius buat nentuin si lengkungan nya //NGGAK DENG, INI BUAT UKURAN SI CIECLE AVATAR
-                    backgroundImage: const AssetImage('assets/images/hik.jpg'), //ini si foto yg bakal di tampilin, bisa lewat link juga, tpi disini ak pke asset
+                    backgroundImage: const AssetImage('assets/images/profile_man.png'), //ini si foto yg bakal di tampilin, bisa lewat link juga, tpi disini ak pke asset
                     backgroundColor: Colors.grey.shade200, //ini tuh bke bg color klo semisal si foto pp nya gaada jdinya dia bakal munculin si bg alias abu
                   ),
 
@@ -80,7 +80,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
             
             const Text(
-              'Hegi',
+              'Jack',
               style: TextStyle(
                 color: Colors.black,
                 fontSize: 25,
@@ -91,8 +91,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
             const SizedBox(height: 30),
             // ini kan manggil si info nya, nah ini ada parameter yg wajib diisi
             const ProfileInfo(
-            name:'Hegira Mecca', 
-            email: 'hegi@gmail.com', 
+            name:'Jack Nelson', 
+            email: 'Jacknel@gmail.com', 
             password: 'rahmatahalu asik'
             )
           ],

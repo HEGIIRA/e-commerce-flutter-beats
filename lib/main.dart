@@ -1,7 +1,9 @@
 import 'package:e_commerce/consts.dart';
+import 'package:e_commerce/state-management/cart_provider.dart';
 import 'package:e_commerce/state-management/theme_provider.dart';
+import 'package:e_commerce/state-management/wishlist_provider.dart';
 import 'package:e_commerce/ui/auth/login_screen.dart';
-import 'package:e_commerce/ui/favorite/favorite_screen.dart';
+import 'package:e_commerce/ui/favorite/wishlist_screen.dart';
 import 'package:e_commerce/ui/home/catalogue_screen.dart';
 import 'package:e_commerce/ui/profile/profile_screen.dart';
 import 'package:e_commerce/settings/settings_screen.dart';
@@ -18,13 +20,20 @@ import 'package:provider/provider.dart';
 // - flutter widget snipeads
 
 void main() {
-  runApp(ChangeNotifierProvider(
-    //placeholder untu template tim provider yang belum terdefinisi
-    create: (_) => ThemeProvider(),
-    child: const FloShop(),
+  runApp(
+    MultiProvider( //ini pke widget, biar bisa manggil banyak provider
+      providers: [
+        ChangeNotifierProvider(create: (_) => ThemeProvider()),
+        ChangeNotifierProvider(create: (_) => CartProvider()),
+        ChangeNotifierProvider(create: (_) => WishlistProvider()),
+      ],
+      child: const FloShop()
     )
   );
 }
+
+//klo stf dijalanin yg pertama dijalanin tuh yg di initstate
+//initstate tuh bwt ngebantu dan nge inisialisasi state nya
 
 class FloShop extends StatefulWidget {
   const FloShop({super.key});
@@ -38,7 +47,7 @@ class _FloShopState extends State<FloShop> {
 
   @override
   Widget build(BuildContext context) {
-    return  Consumer<ThemeProvider>(
+    return  Consumer<ThemeProvider>( //klo ada perubahan theme, maka akan diupdate
       builder: (context, themeProvider, child) { 
         return MaterialApp(
         // material app = kerangka
@@ -69,7 +78,7 @@ class _FloShopState extends State<FloShop> {
           '/catalogue' : (context) => const CatalogueScreen(), //ini penamaannya hrus beda, karna yg tdi tuh unik, identik, beda dri yg lain
           // '/detail' : (context) => const DetailScreen(product: product),
           '/profile' : (context) => const ProfileScreen(),
-          '/favorite' : (context) => const FavoriteScreen(),
+          '/favorite' : (context) => const WishlistScreen(),
           '/settings' : (context) => const SettingsScreen(),
         },
         );

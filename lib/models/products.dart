@@ -1,17 +1,21 @@
 // import 'package:e_commerce/consts.dart';
 import 'package:flutter/material.dart';
 
+
+//ini satu-satunya acuan untuk data yang digaunakan 
 class Product {
   //ini itu untuk modelnya
   //model itu apa??
   //model itu data nya
 
   final String image, title, description;
-  final int size, id;
+  final int size, id, price;
   final Color color;
-  final double price;
+  // final double price;
 
   Product({
+     // this adalah, untuk manandakan bahwa object terkait hanya bisa di akses oleh class terkait
+      //atau class yg sebelumnya memanggil product
     required this.id,
     required this.image,
     required this.title,
@@ -19,18 +23,14 @@ class Product {
     required this.description,
     required this.size,
     required this.color,
-  }
-      // this adalah, untuk manandakan bahwa object terkait hanya bisa di akses oleh class terkait
-      //atau class yg sebelumnya memanggil product
-
-      );
+  });
 }
 
  List<Product> product = [
   Product(
       id: 1,
       title: "Beats Studio Pro",
-      price: 349.99,
+      price: 3499,
       size: 12,
       description: dummyText,
       image: "assets/images/product_img/p_1.png",
@@ -38,7 +38,7 @@ class Product {
   Product(
       id: 2,
       title: "Beats Solo 4",
-      price: 199.99,
+      price: 1999,
       size: 8,
       description: dummyText,
       image: "assets/images/product_img/p_2.png",
@@ -46,7 +46,7 @@ class Product {
   Product(
       id: 3,
       title: "Beats Studio Buds +",
-      price: 169.99,
+      price: 1699,
       size: 10,
       description: dummyText,
       image: "assets/images/product_img/p_3.png",
@@ -54,7 +54,7 @@ class Product {
   Product(
       id: 4,
       title: "Beats solo Buds",
-      price: 79.99,
+      price: 7999,
       size: 11,
       description: dummyText,
       image: "assets/images/product_img/p_4.png",
@@ -62,7 +62,7 @@ class Product {
   Product(
       id: 5,
       title: "Beats Fit Pro",
-      price: 199.99,
+      price: 1999,
       size: 12,
       description: dummyText,
       image: "assets/images/product_img/p_5.png",
@@ -70,7 +70,7 @@ class Product {
   Product(
     id: 6,
     title: "Beats Flex",
-    price: 69.99,
+    price: 6999,
     size: 12,
     description: dummyText,
     image: "assets/images/product_img/p_6.png",
@@ -79,7 +79,7 @@ class Product {
   Product(
     id: 6,
     title: "Beats Pill",
-    price: 149.99,
+    price: 1499,
     size: 12,
     description: dummyText,
     image: "assets/images/product_img/p_7.png",
